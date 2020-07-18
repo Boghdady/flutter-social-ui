@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/curve_clipper.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -76,7 +77,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (_) => HomeScreen()));
+                  },
                   child: Text(
                     'Login',
                     style: TextStyle(
